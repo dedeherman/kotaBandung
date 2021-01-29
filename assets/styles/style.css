@@ -9,8 +9,6 @@ footer {
    color: white;
    background-color: #00a2c6
 }
-/*Untuk menerapkan font-nya, kita ubah nilai properti font-family pada body dengan menambahkan nilai ‘Quicksand’ sebelum generic font sans-serif.
-*/
 
 body {
    font-family: 'Quicksand', sans-serif;
@@ -75,6 +73,8 @@ nav a {
  nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky;
+    top: 0;
  }
 
  nav a {
@@ -85,5 +85,33 @@ nav a {
  }
 
  main {
-    padding: 20px;
- }
+   padding: 20px;
+   overflow: auto;
+}
+
+ #content {
+   float: left;
+   width: 75%;
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+* {
+   box-sizing: border-box;
+}
+
+@media screen and (max-width: 1000px) {
+   #content,
+   aside {
+       width: 100%;
+       padding: 0;
+   }
+}
+
+header{
+   display: inline;
+}
